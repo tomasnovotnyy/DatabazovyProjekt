@@ -1,0 +1,49 @@
+M:\C# C3b\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\OkenniAplikace.exe
+M:\C# C3b\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\OkenniAplikace.deps.json
+M:\C# C3b\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\OkenniAplikace.runtimeconfig.json
+M:\C# C3b\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\OkenniAplikace.dll
+M:\C# C3b\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\OkenniAplikace.pdb
+M:\C# C3b\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.csproj.AssemblyReference.cache
+M:\C# C3b\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.Form1.resources
+M:\C# C3b\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.csproj.GenerateResource.cache
+M:\C# C3b\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.GeneratedMSBuildEditorConfig.editorconfig
+M:\C# C3b\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.AssemblyInfoInputs.cache
+M:\C# C3b\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.AssemblyInfo.cs
+M:\C# C3b\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.csproj.CoreCompileInputs.cache
+M:\C# C3b\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.dll
+M:\C# C3b\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\refint\OkenniAplikace.dll
+M:\C# C3b\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.pdb
+M:\C# C3b\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.genruntimeconfig.cache
+M:\C# C3b\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\ref\OkenniAplikace.dll
+M:\C# C3b\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+M:\C# C3b\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+M:\C# C3b\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+M:\C# C3b\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+M:\C# C3b\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+M:\C# C3b\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+M:\C# C3b\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.csproj.CopyComplete
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\OkenniAplikace.exe
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\OkenniAplikace.deps.json
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\OkenniAplikace.runtimeconfig.json
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\OkenniAplikace.dll
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\OkenniAplikace.pdb
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.csproj.AssemblyReference.cache
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.Form1.resources
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.csproj.GenerateResource.cache
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.GeneratedMSBuildEditorConfig.editorconfig
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.AssemblyInfoInputs.cache
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.AssemblyInfo.cs
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.csproj.CoreCompileInputs.cache
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.csproj.CopyComplete
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.dll
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\refint\OkenniAplikace.dll
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.pdb
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\OkenniAplikace.genruntimeconfig.cache
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\obj\Debug\net6.0-windows\ref\OkenniAplikace.dll
+C:\PERSONAL AND SCHOOL\SCHOOL\Programming\C# - tretak\OkenniAplikace\OkenniAplikace\bin\Debug\net6.0-windows\OkenniAplikace.dll.config
