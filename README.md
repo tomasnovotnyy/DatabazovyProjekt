@@ -1,4 +1,4 @@
-# **_Databázový Projekt_**
+# **Databázový Projekt**
 Tato aplikace slouží pro vložení, úpravu a mazání dat z databáze.<br/>
 Při spuštění si uživatel v app.config souboru zvolí vše potřebné pro pracování v databázi.<br/>
 Následně se mu otevře okno s pěti tabulkami -> Zákazník, Objednávka, Položka, Výrobek a Výrobce.<br/>
