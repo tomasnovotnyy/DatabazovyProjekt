@@ -3,7 +3,7 @@
 Tato aplikace slouží pro vložení, úpravu a mazání dat v databázi.<br/>
 💻Vše bylo vytvořeno v aplikaci Visual Studio 2022 v jazyce C# .<br/>
 Při spuštění si uživatel v **_app.config_** souboru zvolí vše potřebné pro pracování v databázi.<br/>
-Následně se mu otevře okno s pěti tabulkami -> Výrobce, Výrobek, Položka, Objednávka a Zákazník.<br/>
+Následně se otevře okno s pěti tabulkami -> Výrobce, Výrobek, Položka, Objednávka a Zákazník.<br/>
 Pod každým z uvedených tabulek jsou tři tlačítka -> Vložení, Úprava a Smazání dat z tabulky.<br/>
 Vespod je tlačítko 'Exit', které slouží pro zavření aplikace.<br/>
 # *VLOŽENÍ*
