@@ -1,7 +1,7 @@
 # **Databázový Projekt**
 ![Database](https://user-images.githubusercontent.com/84340580/222165637-411cc718-ca2e-4bdb-866e-1f305e8edef4.png)<br/>
 Tato aplikace slouží pro vložení, úpravu a mazání dat z databáze.<br/>
-Vše bylo vytvořeno v aplikaci Visual Studio 2022 v jazyce C#.<br/>
+💻Vše bylo vytvořeno v aplikaci Visual Studio 2022 v jazyce C# .<br/>
 Při spuštění si uživatel v app.config souboru zvolí vše potřebné pro pracování v databázi.<br/>
 Následně se mu otevře okno s pěti tabulkami -> Výrobce, Výrobek, Položka, Objednávka a Zákazník.<br/>
 Pod každým z uvedených tabulek jsou tři tlačítka -> Vložení, Úprava a Smazání dat z tabulky.<br/>
