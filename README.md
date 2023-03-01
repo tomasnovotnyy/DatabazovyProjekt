@@ -1,9 +1,9 @@
 # DatabazovyProjekt
-Tato aplikace slouží pro vložení, úpravu a mazání dat z databáze.
-Při spuštění si uživatel v app.config souboru zvolí vše potřebné pro pracování v databázi.
-Následně se mu otevře okno s pěti tabulkami -> Zákazník, Objednávka, Položka, Výrobek a Výrobce.
-Pod každým z uvedených tabulek jsou tři tlačítka -> Vložení, Úpravu a Smazání dat z tabulky.
-Vespod je tlačítko 'exit', které slouží pro zavření aplikace.
+Tato aplikace slouží pro vložení, úpravu a mazání dat z databáze.<br />
+Při spuštění si uživatel v app.config souboru zvolí vše potřebné pro pracování v databázi.<br />
+Následně se mu otevře okno s pěti tabulkami -> Zákazník, Objednávka, Položka, Výrobek a Výrobce.<br />
+Pod každým z uvedených tabulek jsou tři tlačítka -> Vložení, Úpravu a Smazání dat z tabulky.<br />
+Vespod je tlačítko 'exit', které slouží pro zavření aplikace.<br />
 # VLOŽENÍ
 Pro vložení dat do tabulky stačí zadat do všech textových polí Vámi vybranou hodnotu, která odpovída datovému typu a poté kliknout na tlačítko 'Vložení'.
 # ÚPRAVA
