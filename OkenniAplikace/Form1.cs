@@ -26,7 +26,7 @@ namespace OkenniAplikace
 
         }
 
-        // Tlaèítko, kterım vkládám data do tabulky Vırobce
+        // TlaÄÃ­tko, kterÃ½m vklÃ¡dÃ¡m data do tabulky VÃ½robce
         private void button1_Click(object sender, EventArgs e)
         {
             string nazev = textBox1.Text;
@@ -34,15 +34,15 @@ namespace OkenniAplikace
 
             try
             {
-                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouívám pro zjednodušení pøipojení do databáze pomocí App.config, kde mohu lehce zmìnit všechny potøebné informace
+                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouÅ¾Ã­vÃ¡m pro zjednoduÅ¡enÃ­ pÅ™ipojenÃ­ do databÃ¡ze pomocÃ­ App.config, kde mohu lehce zmÄ›nit vÅ¡echny potÅ™ebnÃ© informace
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]))
                 {
-                    //Kontrola, zda jsem se úspìšnì pøipojil k databázi
+                    //Kontrola, zda jsem se ÃºspÄ›Å¡nÄ› pÅ™ipojil k databÃ¡zi
                     connection.Open();
                     Console.WriteLine("Pripojeno");
                     
-                    //Pøíkaz INSERT INTO k pøídání dat do tabulky
-                    //Zde pouívám @par pro 'odkazování' na jednotlivé sloupce v tabulce, jako napøíklad název, email atd.
+                    //PÅ™Ã­kaz INSERT INTO k pÅ™Ã­dÃ¡nÃ­ dat do tabulky
+                    //Zde pouÅ¾Ã­vÃ¡m @par pro 'odkazovÃ¡nÃ­' na jednotlivÃ© sloupce v tabulce, jako napÅ™Ã­klad nÃ¡zev, email atd.
                     string query = "INSERT INTO Vyrobce(nazev,email) values(@par1,@par2)";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -57,7 +57,7 @@ namespace OkenniAplikace
                 Console.WriteLine(exception.Message);
             }
 
-            //Po zmáèknutí tlaèítka se text nastaví na prázdnı
+            //Po zmÃ¡ÄknutÃ­ tlaÄÃ­tka se text nastavÃ­ na prÃ¡zdnÃ½
             textBox1.Text = "";
             textBox2.Text = "";
         }
@@ -67,38 +67,7 @@ namespace OkenniAplikace
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            SqlConnectionStringBuilder consStringBuilder = new SqlConnectionStringBuilder();
-            consStringBuilder.UserID = "sa";
-            consStringBuilder.Password = "student";
-            consStringBuilder.InitialCatalog = "pv";
-            consStringBuilder.DataSource = "PC972";
-            consStringBuilder.ConnectTimeout = 30;
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(consStringBuilder.ConnectionString))
-                {
-                    connection.Open();
-
-                    string query2 = "select * from Zamestnanec";
-                    using (SqlCommand command = new SqlCommand(query2, connection))
-                    {
-                        SqlDataReader reader = command.ExecuteReader();
-                        while (reader.Read())
-                        {
-                           label5.Text+= "\n " + reader[1] + " " + reader[2] + ", Datum narození: " + reader[3].ToString() + ", Plat: " + reader[4].ToString() + ",-";
-                        }
-                    }
-                }
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception.Message);
-            }
-        }
-
-        // Tlaèítko, kterım vkládám data do tabulky Vırobek
+        // TlaÄÃ­tko, kterÃ½m vklÃ¡dÃ¡m data do tabulky VÃ½robek
         private void button4_Click(object sender, EventArgs e)
         {
             string vyrobce_id = textBox8.Text;
@@ -108,15 +77,15 @@ namespace OkenniAplikace
 
             try
             {
-                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouívám pro zjednodušení pøipojení do databáze pomocí App.config, kde mohu lehce zmìnit všechny potøebné informace
+                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouÅ¾Ã­vÃ¡m pro zjednoduÅ¡enÃ­ pÅ™ipojenÃ­ do databÃ¡ze pomocÃ­ App.config, kde mohu lehce zmÄ›nit vÅ¡echny potÅ™ebnÃ© informace
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]))
                 {
-                    //Kontrola, zda jsem se úspìšnì pøipojil k databázi
+                    //Kontrola, zda jsem se ÃºspÄ›Å¡nÄ› pÅ™ipojil k databÃ¡zi
                     connection.Open();
                     Console.WriteLine("Pripojeno");
 
-                    //Pøíkaz INSERT INTO k pøídání dat do tabulky
-                    //Zde pouívám @par pro 'odkazování' na jednotlivé sloupce v tabulce, jako napøíklad název, email atd.
+                    //PÅ™Ã­kaz INSERT INTO k pÅ™Ã­dÃ¡nÃ­ dat do tabulky
+                    //Zde pouÅ¾Ã­vÃ¡m @par pro 'odkazovÃ¡nÃ­' na jednotlivÃ© sloupce v tabulce, jako napÅ™Ã­klad nÃ¡zev, email atd.
                     string query = "INSERT INTO Vyrobek(vyrobce_id,typ,nazev,cena_ks) values(@par1,@par2,@par3,@par4)";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -133,7 +102,7 @@ namespace OkenniAplikace
                 Console.WriteLine(exception.Message);
             }
 
-            //Po zmáèknutí tlaèítka se text nastaví na prázdnı
+            //Po zmÃ¡ÄknutÃ­ tlaÄÃ­tka se text nastavÃ­ na prÃ¡zdnÃ½
             textBox8.Text = "";
             textBox7.Text = "";
             textBox6.Text = "";
@@ -160,7 +129,7 @@ namespace OkenniAplikace
 
         }
 
-        // Tlaèítko, kterım vkládám data do tabulky Poloka
+        // TlaÄÃ­tko, kterÃ½m vklÃ¡dÃ¡m data do tabulky PoloÅ¾ka
         private void button6_Click(object sender, EventArgs e)
         {
             string obj_id = textBox12.Text;
@@ -170,15 +139,15 @@ namespace OkenniAplikace
 
             try
             {
-                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouívám pro zjednodušení pøipojení do databáze pomocí App.config, kde mohu lehce zmìnit všechny potøebné informace
+                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouÅ¾Ã­vÃ¡m pro zjednoduÅ¡enÃ­ pÅ™ipojenÃ­ do databÃ¡ze pomocÃ­ App.config, kde mohu lehce zmÄ›nit vÅ¡echny potÅ™ebnÃ© informace
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]))
                 {
-                    //Kontrola, zda jsem se úspìšnì pøipojil k databázi
+                    //Kontrola, zda jsem se ÃºspÄ›Å¡nÄ› pÅ™ipojil k databÃ¡zi
                     connection.Open();
                     Console.WriteLine("Pripojeno");
 
-                    //Pøíkaz INSERT INTO k pøídání dat do tabulky
-                    //Zde pouívám @par pro 'odkazování' na jednotlivé sloupce v tabulce, jako napøíklad název, email atd.
+                    //PÅ™Ã­kaz INSERT INTO k pÅ™Ã­dÃ¡nÃ­ dat do tabulky
+                    //Zde pouÅ¾Ã­vÃ¡m @par pro 'odkazovÃ¡nÃ­' na jednotlivÃ© sloupce v tabulce, jako napÅ™Ã­klad nÃ¡zev, email atd.
                     string query = "INSERT INTO Polozka(obj_id,vyrobek_id,pocet_ks,cena_polozky) values(@par1,@par2,@par3,@par4)";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -195,7 +164,7 @@ namespace OkenniAplikace
                 Console.WriteLine(exception.Message);
             }
 
-            //Po zmáèknutí tlaèítka se text nastaví na prázdnı
+            //Po zmÃ¡ÄknutÃ­ tlaÄÃ­tka se text nastavÃ­ na prÃ¡zdnÃ½
             textBox12.Text = "";
             textBox11.Text = "";
             textBox10.Text = "";
@@ -222,7 +191,7 @@ namespace OkenniAplikace
 
         }
 
-        // Tlaèítko, kterım vkládám data do tabulky Objednávka
+        // TlaÄÃ­tko, kterÃ½m vklÃ¡dÃ¡m data do tabulky ObjednÃ¡vka
         private void button8_Click(object sender, EventArgs e)
         {
             string zak_id = textBox16.Text;
@@ -232,15 +201,15 @@ namespace OkenniAplikace
 
             try
             {
-                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouívám pro zjednodušení pøipojení do databáze pomocí App.config, kde mohu lehce zmìnit všechny potøebné informace
+                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouÅ¾Ã­vÃ¡m pro zjednoduÅ¡enÃ­ pÅ™ipojenÃ­ do databÃ¡ze pomocÃ­ App.config, kde mohu lehce zmÄ›nit vÅ¡echny potÅ™ebnÃ© informace
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]))
                 {
-                    //Kontrola, zda jsem se úspìšnì pøipojil k databázi
+                    //Kontrola, zda jsem se ÃºspÄ›Å¡nÄ› pÅ™ipojil k databÃ¡zi
                     connection.Open();
                     Console.WriteLine("Pripojeno");
 
-                    //Pøíkaz INSERT INTO k pøídání dat do tabulky
-                    //Zde pouívám @par pro 'odkazování' na jednotlivé sloupce v tabulce, jako napøíklad název, email atd.
+                    //PÅ™Ã­kaz INSERT INTO k pÅ™Ã­dÃ¡nÃ­ dat do tabulky
+                    //Zde pouÅ¾Ã­vÃ¡m @par pro 'odkazovÃ¡nÃ­' na jednotlivÃ© sloupce v tabulce, jako napÅ™Ã­klad nÃ¡zev, email atd.
                     string query = "INSERT INTO Objednavka(zak_id,cis_obj,datum,cena_objednavky) values(@par1,@par2,@par3,@par4)";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -257,7 +226,7 @@ namespace OkenniAplikace
                 Console.WriteLine(exception.Message);
             }
 
-            //Po zmáèknutí tlaèítka se text nastaví na prázdnı
+            //Po zmÃ¡ÄknutÃ­ tlaÄÃ­tka se text nastavÃ­ na prÃ¡zdnÃ½
             textBox16.Text = "";
             textBox15.Text = "";
             textBox14.Text = "";
@@ -294,7 +263,7 @@ namespace OkenniAplikace
 
         }
 
-        // Tlaèítko, kterım vkládám data do tabulky Zákazník
+        // TlaÄÃ­tko, kterÃ½m vklÃ¡dÃ¡m data do tabulky ZÃ¡kaznÃ­k
         private void button10_Click(object sender, EventArgs e)
         {
             string prijmeni = textBox20.Text;
@@ -302,15 +271,15 @@ namespace OkenniAplikace
 
             try
             {
-                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouívám pro zjednodušení pøipojení do databáze pomocí App.config, kde mohu lehce zmìnit všechny potøebné informace
+                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouÅ¾Ã­vÃ¡m pro zjednoduÅ¡enÃ­ pÅ™ipojenÃ­ do databÃ¡ze pomocÃ­ App.config, kde mohu lehce zmÄ›nit vÅ¡echny potÅ™ebnÃ© informace
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]))
                 {
-                    //Kontrola, zda jsem se úspìšnì pøipojil k databázi
+                    //Kontrola, zda jsem se ÃºspÄ›Å¡nÄ› pÅ™ipojil k databÃ¡zi
                     connection.Open();
                     Console.WriteLine("Pripojeno");
 
-                    //Pøíkaz INSERT INTO k pøídání dat do tabulky
-                    //Zde pouívám @par pro 'odkazování' na jednotlivé sloupce v tabulce, jako napøíklad název, email atd.
+                    //PÅ™Ã­kaz INSERT INTO k pÅ™Ã­dÃ¡nÃ­ dat do tabulky
+                    //Zde pouÅ¾Ã­vÃ¡m @par pro 'odkazovÃ¡nÃ­' na jednotlivÃ© sloupce v tabulce, jako napÅ™Ã­klad nÃ¡zev, email atd.
                     string query = "INSERT INTO Zakaznik(prijmeni,email) values(@par1,@par2)";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -325,7 +294,7 @@ namespace OkenniAplikace
                 Console.WriteLine(exception.Message);
             }
 
-            //Po zmáèknutí tlaèítka se text nastaví na prázdnı
+            //Po zmÃ¡ÄknutÃ­ tlaÄÃ­tka se text nastavÃ­ na prÃ¡zdnÃ½
             textBox20.Text = "";
             textBox19.Text = "";
         }
@@ -340,7 +309,7 @@ namespace OkenniAplikace
 
         }
 
-        // Tlaèítko, kterım mau data z tabulky Vırobce
+        // TlaÄÃ­tko, kterÃ½m maÅ¾u data z tabulky VÃ½robce
         private void button20_Click(object sender, EventArgs e)
         {
             string nazev = textBox1.Text;
@@ -348,15 +317,15 @@ namespace OkenniAplikace
 
             try
             {
-                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouívám pro zjednodušení pøipojení do databáze pomocí App.config, kde mohu lehce zmìnit všechny potøebné informace
+                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouÅ¾Ã­vÃ¡m pro zjednoduÅ¡enÃ­ pÅ™ipojenÃ­ do databÃ¡ze pomocÃ­ App.config, kde mohu lehce zmÄ›nit vÅ¡echny potÅ™ebnÃ© informace
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]))
                 {
-                    //Kontrola, zda jsem se úspìšnì pøipojil k databázi
+                    //Kontrola, zda jsem se ÃºspÄ›Å¡nÄ› pÅ™ipojil k databÃ¡zi
                     connection.Open();
                     Console.WriteLine("Pripojeno");
 
-                    //Pøíkaz DELETE FROM pro smazání dat z tabulky
-                    //Zde pouívám @par pro 'odkazování' na jednotlivé sloupce v tabulce, jako napøíklad název, email atd.
+                    //PÅ™Ã­kaz DELETE FROM pro smazÃ¡nÃ­ dat z tabulky
+                    //Zde pouÅ¾Ã­vÃ¡m @par pro 'odkazovÃ¡nÃ­' na jednotlivÃ© sloupce v tabulce, jako napÅ™Ã­klad nÃ¡zev, email atd.
                     string query = "DELETE FROM Vyrobce WHERE nazev=@par1 OR email=@par2";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -371,12 +340,12 @@ namespace OkenniAplikace
                 Console.WriteLine(exception.Message);
             }
 
-            //Po zmáèknutí tlaèítka se text nastaví na prázdnı
+            //Po zmÃ¡ÄknutÃ­ tlaÄÃ­tka se text nastavÃ­ na prÃ¡zdnÃ½
             textBox1.Text = "";
             textBox2.Text = "";
         }
 
-        // Tlaèítko, kterım mau data z tabulky Vırobek
+        // TlaÄÃ­tko, kterÃ½m maÅ¾u data z tabulky VÃ½robek
         private void button19_Click(object sender, EventArgs e)
         {
             string vyrobce_id = textBox8.Text;
@@ -386,15 +355,15 @@ namespace OkenniAplikace
 
             try
             {
-                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouívám pro zjednodušení pøipojení do databáze pomocí App.config, kde mohu lehce zmìnit všechny potøebné informace
+                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouÅ¾Ã­vÃ¡m pro zjednoduÅ¡enÃ­ pÅ™ipojenÃ­ do databÃ¡ze pomocÃ­ App.config, kde mohu lehce zmÄ›nit vÅ¡echny potÅ™ebnÃ© informace
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]))
                 {
-                    //Kontrola, zda jsem se úspìšnì pøipojil k databázi
+                    //Kontrola, zda jsem se ÃºspÄ›Å¡nÄ› pÅ™ipojil k databÃ¡zi
                     connection.Open();
                     Console.WriteLine("Pripojeno");
 
-                    //Pøíkaz DELETE FROM pro smazání dat z tabulky
-                    //Zde pouívám @par pro 'odkazování' na jednotlivé sloupce v tabulce, jako napøíklad název, email atd.
+                    //PÅ™Ã­kaz DELETE FROM pro smazÃ¡nÃ­ dat z tabulky
+                    //Zde pouÅ¾Ã­vÃ¡m @par pro 'odkazovÃ¡nÃ­' na jednotlivÃ© sloupce v tabulce, jako napÅ™Ã­klad nÃ¡zev, email atd.
                     string query = "DELETE FROM Vyrobek WHERE vyrobce_id=@par1 OR typ=@par2 OR nazev=@par3 OR cena_ks=@par4";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -411,14 +380,14 @@ namespace OkenniAplikace
                 Console.WriteLine(exception.Message);
             }
 
-            //Po zmáèknutí tlaèítka se text nastaví na prázdnı
+            //Po zmÃ¡ÄknutÃ­ tlaÄÃ­tka se text nastavÃ­ na prÃ¡zdnÃ½
             textBox8.Text = "";
             textBox7.Text = "";
             textBox6.Text = "";
             textBox5.Text = "";
         }
 
-        // Tlaèítko, kterım mau data z tabulky Poloka
+        // TlaÄÃ­tko, kterÃ½m maÅ¾u data z tabulky PoloÅ¾ka
         private void button18_Click(object sender, EventArgs e)
         {
             string obj_id = textBox12.Text;
@@ -428,15 +397,15 @@ namespace OkenniAplikace
 
             try
             {
-                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouívám pro zjednodušení pøipojení do databáze pomocí App.config, kde mohu lehce zmìnit všechny potøebné informace
+                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouÅ¾Ã­vÃ¡m pro zjednoduÅ¡enÃ­ pÅ™ipojenÃ­ do databÃ¡ze pomocÃ­ App.config, kde mohu lehce zmÄ›nit vÅ¡echny potÅ™ebnÃ© informace
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]))
                 {
-                    //Kontrola, zda jsem se úspìšnì pøipojil k databázi
+                    //Kontrola, zda jsem se ÃºspÄ›Å¡nÄ› pÅ™ipojil k databÃ¡zi
                     connection.Open();
                     Console.WriteLine("Pripojeno");
 
-                    //Pøíkaz DELETE FROM pro smazání dat z tabulky
-                    //Zde pouívám @par pro 'odkazování' na jednotlivé sloupce v tabulce, jako napøíklad název, email atd.
+                    //PÅ™Ã­kaz DELETE FROM pro smazÃ¡nÃ­ dat z tabulky
+                    //Zde pouÅ¾Ã­vÃ¡m @par pro 'odkazovÃ¡nÃ­' na jednotlivÃ© sloupce v tabulce, jako napÅ™Ã­klad nÃ¡zev, email atd.
                     string query = "DELETE FROM Polozka WHERE obj_id=@par1 OR vyrobek_id=@par2 OR pocet_ks=@par3 OR cena_polozky=@par4";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -453,14 +422,14 @@ namespace OkenniAplikace
                 Console.WriteLine(exception.Message);
             }
 
-            //Po zmáèknutí tlaèítka se text nastaví na prázdnı
+            //Po zmÃ¡ÄknutÃ­ tlaÄÃ­tka se text nastavÃ­ na prÃ¡zdnÃ½
             textBox12.Text = "";
             textBox11.Text = "";
             textBox10.Text = "";
             textBox9.Text = "";
         }
 
-        // Tlaèítko, kterım mau data z tabulky Objednávka
+        // TlaÄÃ­tko, kterÃ½m maÅ¾u data z tabulky ObjednÃ¡vka
         private void button17_Click(object sender, EventArgs e)
         {
             string zak_id = textBox16.Text;
@@ -470,15 +439,15 @@ namespace OkenniAplikace
 
             try
             {
-                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouívám pro zjednodušení pøipojení do databáze pomocí App.config, kde mohu lehce zmìnit všechny potøebné informace
+                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouÅ¾Ã­vÃ¡m pro zjednoduÅ¡enÃ­ pÅ™ipojenÃ­ do databÃ¡ze pomocÃ­ App.config, kde mohu lehce zmÄ›nit vÅ¡echny potÅ™ebnÃ© informace
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]))
                 {
-                    //Kontrola, zda jsem se úspìšnì pøipojil k databázi
+                    //Kontrola, zda jsem se ÃºspÄ›Å¡nÄ› pÅ™ipojil k databÃ¡zi
                     connection.Open();
                     Console.WriteLine("Pripojeno");
 
-                    //Pøíkaz DELETE FROM pro smazání dat z tabulky
-                    //Zde pouívám @par pro 'odkazování' na jednotlivé sloupce v tabulce, jako napøíklad název, email atd.
+                    //PÅ™Ã­kaz DELETE FROM pro smazÃ¡nÃ­ dat z tabulky
+                    //Zde pouÅ¾Ã­vÃ¡m @par pro 'odkazovÃ¡nÃ­' na jednotlivÃ© sloupce v tabulce, jako napÅ™Ã­klad nÃ¡zev, email atd.
                     string query = "DELETE FROM Objednavka WHERE zak_id=@par1 OR cis_obj=@par2 OR datum=@par3 OR cena_objednavky=@par4";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -495,14 +464,14 @@ namespace OkenniAplikace
                 Console.WriteLine(exception.Message);
             }
 
-            //Po zmáèknutí tlaèítka se text nastaví na prázdnı
+            //Po zmÃ¡ÄknutÃ­ tlaÄÃ­tka se text nastavÃ­ na prÃ¡zdnÃ½
             textBox16.Text = "";
             textBox15.Text = "";
             textBox14.Text = "";
             textBox13.Text = "";
         }
 
-        // Tlaèítko, kterım mau data z tabulky Zákazník
+        // TlaÄÃ­tko, kterÃ½m maÅ¾u data z tabulky ZÃ¡kaznÃ­k
         private void button16_Click(object sender, EventArgs e)
         {
             string prijmeni = textBox20.Text;
@@ -510,15 +479,15 @@ namespace OkenniAplikace
 
             try
             {
-                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouívám pro zjednodušení pøipojení do databáze pomocí App.config, kde mohu lehce zmìnit všechny potøebné informace
+                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouÅ¾Ã­vÃ¡m pro zjednoduÅ¡enÃ­ pÅ™ipojenÃ­ do databÃ¡ze pomocÃ­ App.config, kde mohu lehce zmÄ›nit vÅ¡echny potÅ™ebnÃ© informace
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]))
                 {
-                    //Kontrola, zda jsem se úspìšnì pøipojil k databázi
+                    //Kontrola, zda jsem se ÃºspÄ›Å¡nÄ› pÅ™ipojil k databÃ¡zi
                     connection.Open();
                     Console.WriteLine("Pripojeno");
 
-                    //Pøíkaz DELETE FROM pro smazání dat z tabulky
-                    //Zde pouívám @par pro 'odkazování' na jednotlivé sloupce v tabulce, jako napøíklad název, email atd.
+                    //PÅ™Ã­kaz DELETE FROM pro smazÃ¡nÃ­ dat z tabulky
+                    //Zde pouÅ¾Ã­vÃ¡m @par pro 'odkazovÃ¡nÃ­' na jednotlivÃ© sloupce v tabulce, jako napÅ™Ã­klad nÃ¡zev, email atd.
                     string query = "DELETE FROM Zakaznik WHERE prijmeni=@par1 OR email=@par2";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -533,36 +502,36 @@ namespace OkenniAplikace
                 Console.WriteLine(exception.Message);
             }
 
-            //Po zmáèknutí tlaèítka se text nastaví na prázdnı
+            //Po zmÃ¡ÄknutÃ­ tlaÄÃ­tka se text nastavÃ­ na prÃ¡zdnÃ½
             textBox20.Text = "";
             textBox19.Text = "";
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            //Promìnné, které zobrazují zprávy pro uivatele
+            //PromÄ›nnÃ©, kterÃ© zobrazujÃ­ zprÃ¡vy pro uÅ¾ivatele
             string message, nadpis, message2, nadpis2;
             object hodnota1, hodnota2;
 
-            message = "Zadejte název vırobce, kterého chcete upravit.";
-            nadpis = "Úprava";
+            message = "Zadejte nÃ¡zev vÃ½robce, kterÃ©ho chcete upravit.";
+            nadpis = "Ãšprava";
 
-            message2 = "Zadejte novı název vırobce.";
-            nadpis2 = "Úprava";
+            message2 = "Zadejte novÃ½ nÃ¡zev vÃ½robce.";
+            nadpis2 = "Ãšprava";
 
             hodnota1 = Interaction.InputBox(message,nadpis);
 
             try
             {
-                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouívám pro zjednodušení pøipojení do databáze pomocí App.config, kde mohu lehce zmìnit všechny potøebné informace
+                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouÅ¾Ã­vÃ¡m pro zjednoduÅ¡enÃ­ pÅ™ipojenÃ­ do databÃ¡ze pomocÃ­ App.config, kde mohu lehce zmÄ›nit vÅ¡echny potÅ™ebnÃ© informace
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]))
                 {
-                    //Kontrola, zda jsem se úspìšnì pøipojil k databázi
+                    //Kontrola, zda jsem se ÃºspÄ›Å¡nÄ› pÅ™ipojil k databÃ¡zi
                     connection.Open();
                     Console.WriteLine("Pripojeno");
 
-                    //Pøíkaz UPDATE pro úpravu dat v tabulce
-                    //Zde pouívám @par pro 'odkazování' na jednotlivé sloupce v tabulce, jako napøíklad název, email atd.
+                    //PÅ™Ã­kaz UPDATE pro Ãºpravu dat v tabulce
+                    //Zde pouÅ¾Ã­vÃ¡m @par pro 'odkazovÃ¡nÃ­' na jednotlivÃ© sloupce v tabulce, jako napÅ™Ã­klad nÃ¡zev, email atd.
                     string query = "UPDATE Vyrobce SET Nazev=@par1 WHERE Nazev=@par2";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -576,12 +545,12 @@ namespace OkenniAplikace
 
                             if ((string)hodnota2 == "")
                             {
-                                Interaction.MsgBox("Nezadali jste ádnı název", MsgBoxStyle.Information, "Špatnì");
+                                Interaction.MsgBox("Nezadali jste Å¾Ã¡dnÃ½ nÃ¡zev", MsgBoxStyle.Information, "Å patnÄ›");
                             }
                         }
                         else if ((string)hodnota1 == "")
                         {
-                            Interaction.MsgBox("Nezadali jste ádnı název", MsgBoxStyle.Information, "Špatnì");
+                            Interaction.MsgBox("Nezadali jste Å¾Ã¡dnÃ½ nÃ¡zev", MsgBoxStyle.Information, "Å patnÄ›");
                         }
                     }
                 }
@@ -592,43 +561,43 @@ namespace OkenniAplikace
             }
         }
 
-        //Button pro ukonèení aplikace
-        //Uivatel tak mùe ukonèit aplikaci buï køíkem v pravém horním rohu nebo tlaèítkem Exit
+        //Button pro ukonÄenÃ­ aplikace
+        //UÅ¾ivatel tak mÅ¯Å¾e ukonÄit aplikaci buÄ kÅ™Ã­Å¾kem v pravÃ©m hornÃ­m rohu nebo tlaÄÃ­tkem Exit
         private void button2_Click_1(object sender, EventArgs e)
         {
-            //Zde pouze zvolím otázku, kterou chci poloit uivateli a následnì kontroluji zda se jeho odpovìï rovná ano nebo ne
-            if(MessageBox.Show("Opravdu chcete ukonèit aplikaci?","Exit",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //Zde pouze zvolÃ­m otÃ¡zku, kterou chci poloÅ¾it uÅ¾ivateli a nÃ¡slednÄ› kontroluji zda se jeho odpovÄ›Ä rovnÃ¡ ano nebo ne
+            if(MessageBox.Show("Opravdu chcete ukonÄit aplikaci?","Exit",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                //Zavøení aplikace
+                //ZavÅ™enÃ­ aplikace
                 Application.Exit();
             }
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            //Promìnné, které zobrazují zprávy pro uivatele
+            //PromÄ›nnÃ©, kterÃ© zobrazujÃ­ zprÃ¡vy pro uÅ¾ivatele
             string message, nadpis, message2, nadpis2;
             object hodnota1, hodnota2;
 
-            message = "Zadejte název vırobku, kterı chcete upravit.";
-            nadpis = "Úprava";
+            message = "Zadejte nÃ¡zev vÃ½robku, kterÃ½ chcete upravit.";
+            nadpis = "Ãšprava";
 
-            message2 = "Zadejte novı název vırobku.";
-            nadpis2 = "Úprava";
+            message2 = "Zadejte novÃ½ nÃ¡zev vÃ½robku.";
+            nadpis2 = "Ãšprava";
 
             hodnota1 = Interaction.InputBox(message, nadpis);
 
             try
             {
-                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouívám pro zjednodušení pøipojení do databáze pomocí App.config, kde mohu lehce zmìnit všechny potøebné informace
+                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouÅ¾Ã­vÃ¡m pro zjednoduÅ¡enÃ­ pÅ™ipojenÃ­ do databÃ¡ze pomocÃ­ App.config, kde mohu lehce zmÄ›nit vÅ¡echny potÅ™ebnÃ© informace
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]))
                 {
-                    //Kontrola, zda jsem se úspìšnì pøipojil k databázi
+                    //Kontrola, zda jsem se ÃºspÄ›Å¡nÄ› pÅ™ipojil k databÃ¡zi
                     connection.Open();
                     Console.WriteLine("Pripojeno");
 
-                    //Pøíkaz UPDATE pro úpravu dat v tabulce
-                    //Zde pouívám @par pro 'odkazování' na jednotlivé sloupce v tabulce, jako napøíklad název, email atd.
+                    //PÅ™Ã­kaz UPDATE pro Ãºpravu dat v tabulce
+                    //Zde pouÅ¾Ã­vÃ¡m @par pro 'odkazovÃ¡nÃ­' na jednotlivÃ© sloupce v tabulce, jako napÅ™Ã­klad nÃ¡zev, email atd.
                     string query = "UPDATE Vyrobek SET Nazev=@par1 WHERE Nazev=@par2";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -642,12 +611,12 @@ namespace OkenniAplikace
 
                             if ((string)hodnota2 == "")
                             {
-                                Interaction.MsgBox("Nezadali jste ádnı název", MsgBoxStyle.Information, "Špatnì");
+                                Interaction.MsgBox("Nezadali jste Å¾Ã¡dnÃ½ nÃ¡zev", MsgBoxStyle.Information, "Å patnÄ›");
                             }
                         }
                         else if ((string)hodnota1 == "")
                         {
-                            Interaction.MsgBox("Nezadali jste ádnı název", MsgBoxStyle.Information, "Špatnì");
+                            Interaction.MsgBox("Nezadali jste Å¾Ã¡dnÃ½ nÃ¡zev", MsgBoxStyle.Information, "Å patnÄ›");
                         }
                     }
                 }
@@ -660,29 +629,29 @@ namespace OkenniAplikace
 
         private void button13_Click(object sender, EventArgs e)
         {
-            //Promìnné, které zobrazují zprávy pro uivatele
+            //PromÄ›nnÃ©, kterÃ© zobrazujÃ­ zprÃ¡vy pro uÅ¾ivatele
             string message, nadpis, message2, nadpis2;
             object hodnota1, hodnota2;
 
-            message = "Zadejte cenu poloky, kterou chcete upravit.";
-            nadpis = "Úprava";
+            message = "Zadejte cenu poloÅ¾ky, kterou chcete upravit.";
+            nadpis = "Ãšprava";
 
-            message2 = "Zadejte novou cenu poloky.";
-            nadpis2 = "Úprava";
+            message2 = "Zadejte novou cenu poloÅ¾ky.";
+            nadpis2 = "Ãšprava";
 
             hodnota1 = Interaction.InputBox(message, nadpis);
 
             try
             {
-                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouívám pro zjednodušení pøipojení do databáze pomocí App.config, kde mohu lehce zmìnit všechny potøebné informace
+                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouÅ¾Ã­vÃ¡m pro zjednoduÅ¡enÃ­ pÅ™ipojenÃ­ do databÃ¡ze pomocÃ­ App.config, kde mohu lehce zmÄ›nit vÅ¡echny potÅ™ebnÃ© informace
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]))
                 {
-                    //Kontrola, zda jsem se úspìšnì pøipojil k databázi
+                    //Kontrola, zda jsem se ÃºspÄ›Å¡nÄ› pÅ™ipojil k databÃ¡zi
                     connection.Open();
                     Console.WriteLine("Pripojeno");
 
-                    //Pøíkaz UPDATE pro úpravu dat v tabulce
-                    //Zde pouívám @par pro 'odkazování' na jednotlivé sloupce v tabulce, jako napøíklad název, email atd.
+                    //PÅ™Ã­kaz UPDATE pro Ãºpravu dat v tabulce
+                    //Zde pouÅ¾Ã­vÃ¡m @par pro 'odkazovÃ¡nÃ­' na jednotlivÃ© sloupce v tabulce, jako napÅ™Ã­klad nÃ¡zev, email atd.
                     string query = "UPDATE Polozka SET cena_polozky=@par1 WHERE cena_polozky=@par2";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -696,12 +665,12 @@ namespace OkenniAplikace
 
                             if ((string)hodnota2 == "")
                             {
-                                Interaction.MsgBox("Nezadali jste ádnou cenu", MsgBoxStyle.Information, "Špatnì");
+                                Interaction.MsgBox("Nezadali jste Å¾Ã¡dnou cenu", MsgBoxStyle.Information, "Å patnÄ›");
                             }
                         }
                         else if ((string)hodnota1 == "")
                         {
-                            Interaction.MsgBox("Nezadali jste ádnou cenu", MsgBoxStyle.Information, "Špatnì");
+                            Interaction.MsgBox("Nezadali jste Å¾Ã¡dnou cenu", MsgBoxStyle.Information, "Å patnÄ›");
                         }
                     }
                 }
@@ -714,29 +683,29 @@ namespace OkenniAplikace
 
         private void button12_Click(object sender, EventArgs e)
         {
-            //Promìnné, které zobrazují zprávy pro uivatele
+            //PromÄ›nnÃ©, kterÃ© zobrazujÃ­ zprÃ¡vy pro uÅ¾ivatele
             string message, nadpis, message2, nadpis2;
             object hodnota1, hodnota2;
 
-            message = "Zadejte cenu objednávky, kterou chcete upravit.";
-            nadpis = "Úprava";
+            message = "Zadejte cenu objednÃ¡vky, kterou chcete upravit.";
+            nadpis = "Ãšprava";
 
-            message2 = "Zadejte novou cenu objednávky.";
-            nadpis2 = "Úprava";
+            message2 = "Zadejte novou cenu objednÃ¡vky.";
+            nadpis2 = "Ãšprava";
 
             hodnota1 = Interaction.InputBox(message, nadpis);
 
             try
             {
-                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouívám pro zjednodušení pøipojení do databáze pomocí App.config, kde mohu lehce zmìnit všechny potøebné informace
+                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouÅ¾Ã­vÃ¡m pro zjednoduÅ¡enÃ­ pÅ™ipojenÃ­ do databÃ¡ze pomocÃ­ App.config, kde mohu lehce zmÄ›nit vÅ¡echny potÅ™ebnÃ© informace
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]))
                 {
-                    //Kontrola, zda jsem se úspìšnì pøipojil k databázi
+                    //Kontrola, zda jsem se ÃºspÄ›Å¡nÄ› pÅ™ipojil k databÃ¡zi
                     connection.Open();
                     Console.WriteLine("Pripojeno");
 
-                    //Pøíkaz UPDATE pro úpravu dat v tabulce
-                    //Zde pouívám @par pro 'odkazování' na jednotlivé sloupce v tabulce, jako napøíklad název, email atd.
+                    //PÅ™Ã­kaz UPDATE pro Ãºpravu dat v tabulce
+                    //Zde pouÅ¾Ã­vÃ¡m @par pro 'odkazovÃ¡nÃ­' na jednotlivÃ© sloupce v tabulce, jako napÅ™Ã­klad nÃ¡zev, email atd.
                     string query = "UPDATE Objednavka SET cena_objednavky=@par1 WHERE cena_objednavky=@par2";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -750,12 +719,12 @@ namespace OkenniAplikace
 
                             if ((string)hodnota2 == "")
                             {
-                                Interaction.MsgBox("Nezadali jste ádnou cenu", MsgBoxStyle.Information, "Špatnì");
+                                Interaction.MsgBox("Nezadali jste Å¾Ã¡dnou cenu", MsgBoxStyle.Information, "Å patnÄ›");
                             }
                         }
                         else if ((string)hodnota1 == "")
                         {
-                            Interaction.MsgBox("Nezadali jste ádnou cenu", MsgBoxStyle.Information, "Špatnì");
+                            Interaction.MsgBox("Nezadali jste Å¾Ã¡dnou cenu", MsgBoxStyle.Information, "Å patnÄ›");
                         }
                     }
                 }
@@ -768,29 +737,29 @@ namespace OkenniAplikace
 
         private void button11_Click(object sender, EventArgs e)
         {
-            //Promìnné, které zobrazují zprávy pro uivatele
+            //PromÄ›nnÃ©, kterÃ© zobrazujÃ­ zprÃ¡vy pro uÅ¾ivatele
             string message, nadpis, message2, nadpis2;
             object hodnota1, hodnota2;
 
-            message = "Zadejte e-mail zákazníka, kterého chcete upravit.";
-            nadpis = "Úprava";
+            message = "Zadejte e-mail zÃ¡kaznÃ­ka, kterÃ©ho chcete upravit.";
+            nadpis = "Ãšprava";
 
-            message2 = "Zadejte novı zákazníkùv e-mail.";
-            nadpis2 = "Úprava";
+            message2 = "Zadejte novÃ½ zÃ¡kaznÃ­kÅ¯v e-mail.";
+            nadpis2 = "Ãšprava";
 
             hodnota1 = Interaction.InputBox(message, nadpis);
 
             try
             {
-                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouívám pro zjednodušení pøipojení do databáze pomocí App.config, kde mohu lehce zmìnit všechny potøebné informace
+                //System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]) pouÅ¾Ã­vÃ¡m pro zjednoduÅ¡enÃ­ pÅ™ipojenÃ­ do databÃ¡ze pomocÃ­ App.config, kde mohu lehce zmÄ›nit vÅ¡echny potÅ™ebnÃ© informace
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"]))
                 {
-                    //Kontrola, zda jsem se úspìšnì pøipojil k databázi
+                    //Kontrola, zda jsem se ÃºspÄ›Å¡nÄ› pÅ™ipojil k databÃ¡zi
                     connection.Open();
                     Console.WriteLine("Pripojeno");
 
-                    //Pøíkaz UPDATE pro úpravu dat v tabulce
-                    //Zde pouívám @par pro 'odkazování' na jednotlivé sloupce v tabulce, jako napøíklad název, email atd.
+                    //PÅ™Ã­kaz UPDATE pro Ãºpravu dat v tabulce
+                    //Zde pouÅ¾Ã­vÃ¡m @par pro 'odkazovÃ¡nÃ­' na jednotlivÃ© sloupce v tabulce, jako napÅ™Ã­klad nÃ¡zev, email atd.
                     string query = "UPDATE Zakaznik SET email=@par1 WHERE email=@par2";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -804,12 +773,12 @@ namespace OkenniAplikace
 
                             if ((string)hodnota2 == "")
                             {
-                                Interaction.MsgBox("Nezadali jste ádnı e-mail", MsgBoxStyle.Information, "Špatnì");
+                                Interaction.MsgBox("Nezadali jste Å¾Ã¡dnÃ½ e-mail", MsgBoxStyle.Information, "Å patnÄ›");
                             }
                         }
                         else if ((string)hodnota1 == "")
                         {
-                            Interaction.MsgBox("Nezadali jste ádnı e-mail", MsgBoxStyle.Information, "Špatnì");
+                            Interaction.MsgBox("Nezadali jste Å¾Ã¡dnÃ½ e-mail", MsgBoxStyle.Information, "Å patnÄ›");
                         }
                     }
                 }
